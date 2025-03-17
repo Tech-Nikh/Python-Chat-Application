@@ -6,6 +6,7 @@ s = socket.socket()
 host = socket.gethostname()
 print(' Server will start on host : ', host)
 port = 8080
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1
 s.bind((host, port))
 print()
 print('Waiting for connection')
